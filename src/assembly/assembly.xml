@@ -1,0 +1,110 @@
+<!--
+
+    Copyright (c) 2012-2015 Codenvy, S.A.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+      Codenvy, S.A. - initial API and implementation
+
+-->
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+    <id>bundle-zip</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/site</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-site</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/api</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-api</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/builder</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-builder</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/runner</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-runner</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/codeassistant</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-codeassistant</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/datasource</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-datasource-plugin</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/aio</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-codenvy-allinone</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/im</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-im</include>
+            </includes>
+        </dependencySet>
+        <dependencySet>
+            <unpack>false</unpack>
+            <outputDirectory>files/servers/prod/analytics</outputDirectory>
+            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <includes>
+                <include>com.codenvy.analytics:analytics-tomcat-pkg</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <outputDirectory>/manifests</outputDirectory>
+            <directory>${project.basedir}/target</directory>
+            <excludes>
+                <exclude>*</exclude>
+            </excludes>
+       </fileSet>
+        <fileSet>
+            <outputDirectory>/modules</outputDirectory>
+            <directory>${project.basedir}/target</directory>
+            <excludes>
+                <exclude>*</exclude>
+            </excludes>
+       </fileSet>
+    </fileSets>
+</assembly>
