@@ -22,6 +22,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/site</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-site</include>
             </includes>
@@ -30,6 +31,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/api</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-api</include>
             </includes>
@@ -38,6 +40,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/builder</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-builder</include>
             </includes>
@@ -46,6 +49,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/runner</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-runner</include>
             </includes>
@@ -54,6 +58,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/codeassistant</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-codeassistant</include>
             </includes>
@@ -62,6 +67,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/datasource</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-datasource-plugin</include>
             </includes>
@@ -70,6 +76,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/aio</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-codenvy-allinone</include>
             </includes>
@@ -78,6 +85,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/im</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-im</include>
             </includes>
@@ -86,6 +94,7 @@
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/analytics</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
+            <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.analytics:analytics-tomcat-pkg</include>
             </includes>
@@ -93,18 +102,32 @@
     </dependencySets>
     <fileSets>
         <fileSet>
-            <outputDirectory>/manifests</outputDirectory>
-            <directory>${project.basedir}/target</directory>
-            <excludes>
-                <exclude>*</exclude>
-            </excludes>
+            <directory>${basedir}/target/deployment/puppet/modules/</directory>
+            <outputDirectory>modules</outputDirectory>
+            <includes>
+                <include>*</include>
+            </includes>
        </fileSet>
         <fileSet>
-            <outputDirectory>/modules</outputDirectory>
-            <directory>${project.basedir}/target</directory>
-            <excludes>
-                <exclude>*</exclude>
-            </excludes>
+            <directory>${basedir}/target/deployment/puppet/manifests/nodes/single_server</directory>
+            <outputDirectory>manifests/nodes/single_server</outputDirectory>
+            <includes>
+                <include>*</include>
+            </includes>
+       </fileSet>
+        <fileSet>
+            <directory>${basedir}/target/deployment/puppet/manifests/nodes/multi_server</directory>
+            <outputDirectory>manifests/nodes/multi_server</outputDirectory>
+            <includes>
+                <include>*</include>
+            </includes>
+       </fileSet>
+        <fileSet>
+            <directory>${basedir}/target/deployment/puppet/manifests/</directory>
+            <outputDirectory>manifests/</outputDirectory>
+            <includes>
+                <include>site.pp</include>
+            </includes>
        </fileSet>
     </fileSets>
 </assembly>
