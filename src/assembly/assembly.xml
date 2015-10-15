@@ -105,7 +105,7 @@
             <directory>${basedir}/target/deployment/puppet/modules/</directory>
             <outputDirectory>modules</outputDirectory>
             <includes>
-                <include>*</include>
+                <include>**/*</include>
             </includes>
        </fileSet>
         <fileSet>
