@@ -16,7 +16,7 @@
     <parent>
         <artifactId>maven-depmgt-pom</artifactId>
         <groupId>com.codenvy.che.depmgt</groupId>
-        <version>3.13.4-SNAPSHOT</version>
+        <version>3.14.0-SNAPSHOT</version>
     </parent>
     <artifactId>cdec-bundle</artifactId>
     <packaging>pom</packaging>
@@ -25,7 +25,7 @@
         <dependency>
             <groupId>com.codenvy.analytics</groupId>
             <artifactId>analytics-tomcat-pkg</artifactId>
-            <version>3.13.1</version>
+            <version>3.13.4</version>
             <type>zip</type>
         </dependency>
         <dependency>
