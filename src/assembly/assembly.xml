@@ -18,7 +18,7 @@
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
     <dependencySets>
-        <dependencySet>
+        <!--dependencySet>
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/site</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
@@ -35,41 +35,15 @@
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-api</include>
             </includes>
-        </dependencySet>
-        <dependencySet>
-            <unpack>false</unpack>
-            <outputDirectory>files/servers/prod/builder</outputDirectory>
-            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
-            <useProjectArtifact>false</useProjectArtifact>
-            <includes>
-                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-builder</include>
-            </includes>
-        </dependencySet>
+        </dependencySet-->
         <dependencySet>
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/runner</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>false</useProjectArtifact>
             <includes>
-                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-runner</include>
-            </includes>
-        </dependencySet>
-        <dependencySet>
-            <unpack>false</unpack>
-            <outputDirectory>files/servers/prod/codeassistant</outputDirectory>
-            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
-            <useProjectArtifact>false</useProjectArtifact>
-            <includes>
-                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-codeassistant</include>
-            </includes>
-        </dependencySet>
-        <dependencySet>
-            <unpack>false</unpack>
-            <outputDirectory>files/servers/prod/datasource</outputDirectory>
-            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
-            <useProjectArtifact>false</useProjectArtifact>
-            <includes>
-                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-datasource-plugin</include>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-ext-server</include>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-zip-terminal</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -79,6 +53,8 @@
             <useProjectArtifact>false</useProjectArtifact>
             <includes>
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-codenvy-allinone</include>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-ext-server</include>
+                <include>com.codenvy.onpremises:onpremises-ide-packaging-zip-terminal</include>
             </includes>
         </dependencySet>
         <dependencySet>
@@ -90,7 +66,7 @@
                 <include>com.codenvy.onpremises:onpremises-ide-packaging-tomcat-im</include>
             </includes>
         </dependencySet>
-        <dependencySet>
+        <!--dependencySet>
             <unpack>false</unpack>
             <outputDirectory>files/servers/prod/analytics</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
@@ -98,7 +74,7 @@
             <includes>
                 <include>com.codenvy.analytics:analytics-tomcat-pkg</include>
             </includes>
-        </dependencySet>
+        </dependencySet-->
     </dependencySets>
     <fileSets>
         <fileSet>
@@ -109,19 +85,19 @@
             </includes>
        </fileSet>
         <fileSet>
-            <directory>${basedir}/target/deployment/puppet/manifests/nodes/single_server</directory>
-            <outputDirectory>manifests/nodes/single_server</outputDirectory>
+            <directory>${basedir}/target/deployment/puppet/manifests/nodes/codenvy</directory>
+            <outputDirectory>manifests/nodes/codenvy</outputDirectory>
             <includes>
                 <include>*</include>
             </includes>
        </fileSet>
-        <fileSet>
+        <!--fileSet>
             <directory>${basedir}/target/deployment/puppet/manifests/nodes/multi_server</directory>
             <outputDirectory>manifests/nodes/multi_server</outputDirectory>
             <includes>
                 <include>*</include>
             </includes>
-       </fileSet>
+       </fileSet-->
         <fileSet>
             <directory>${basedir}/target/deployment/puppet/manifests/</directory>
             <outputDirectory>manifests/</outputDirectory>
