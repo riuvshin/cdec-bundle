@@ -42,7 +42,7 @@
         </dependencySet-->
         <dependencySet>
             <unpack>false</unpack>
-            <outputDirectory>files/servers/prod/runner</outputDirectory>
+            <outputDirectory>files/servers/prod/machine</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>false</useProjectArtifact>
             <includes>
