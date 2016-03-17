@@ -18,8 +18,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>maven-depmgt-pom</artifactId>
-        <groupId>com.codenvy.che.depmgt</groupId>
+        <artifactId>onpremises-assembly-parent</artifactId>
+        <groupId>com.codenvy.onpremises</groupId>
         <version>4.0.0-RC14-SNAPSHOT</version>
     </parent>
     <artifactId>cdec-bundle</artifactId>
@@ -41,25 +41,25 @@
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>
             <artifactId>onpremises-ide-packaging-tomcat-codenvy-allinone</artifactId>
-            <version>${codenvy.onpremises.version}</version>
+            <version>${project.parent.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>
             <artifactId>onpremises-ide-packaging-tomcat-ext-server</artifactId>
-            <version>${codenvy.onpremises.version}</version>
+            <version>${project.parent.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>
             <artifactId>onpremises-ide-packaging-tomcat-im</artifactId>
-            <version>${codenvy.onpremises.version}</version>
+            <version>${project.parent.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>
             <artifactId>onpremises-ide-packaging-zip-terminal</artifactId>
-            <version>${codenvy.onpremises.version}</version>
+            <version>${project.parent.version}</version>
             <type>zip</type>
         </dependency>
         <!--dependency>
