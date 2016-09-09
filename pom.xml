@@ -48,7 +48,7 @@
             <groupId>com.codenvy.onpremises</groupId>
             <artifactId>onpremises-ide-packaging-tomcat-ext-server</artifactId>
             <version>${project.parent.version}</version>
-            <type>zip</type>
+            <type>tar.gz</type>
         </dependency>
         <dependency>
             <groupId>com.codenvy.onpremises</groupId>
@@ -60,7 +60,7 @@
             <groupId>com.codenvy.onpremises</groupId>
             <artifactId>onpremises-ide-packaging-zip-terminal</artifactId>
             <version>${project.parent.version}</version>
-            <type>zip</type>
+            <type>tar.gz</type>
         </dependency>
         <!--dependency>
             <groupId>com.codenvy.onpremises</groupId>
