@@ -27,50 +27,33 @@
     <name>CDEC BUNDLE</name>
     <properties>
         <deployment.branch>enterprise_4.0</deployment.branch>
+        <customer.groupid>onpremises</customer.groupid>
     </properties>
     <dependencies>
-        <!--dependency>
-            <groupId>com.codenvy.analytics</groupId>
-            <artifactId>analytics-tomcat-pkg</artifactId>
-            <version>3.13.4</version>
-            <type>zip</type>
-        </dependency-->
-        <!--dependency>
-            <groupId>com.codenvy.onpremises</groupId>
-            <artifactId>onpremises-ide-packaging-tomcat-api</artifactId>
-            <version>${codenvy.onpremises.version}</version>
-            <type>zip</type>
-        </dependency-->
         <dependency>
-            <groupId>com.codenvy.onpremises</groupId>
+            <groupId>com.codenvy.${customer.groupid}</groupId>
             <artifactId>onpremises-ide-packaging-tomcat-codenvy-allinone</artifactId>
             <version>${project.parent.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>com.codenvy.onpremises</groupId>
+            <groupId>com.codenvy.${customer.groupid}</groupId>
             <artifactId>onpremises-ide-packaging-tomcat-ext-server</artifactId>
             <version>${project.parent.version}</version>
             <type>tar.gz</type>
         </dependency>
         <dependency>
-            <groupId>com.codenvy.onpremises</groupId>
+            <groupId>com.codenvy.${customer.groupid}</groupId>
             <artifactId>onpremises-ide-packaging-tomcat-im</artifactId>
             <version>${project.parent.version}</version>
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>com.codenvy.onpremises</groupId>
+            <groupId>com.codenvy.${customer.groupid}</groupId>
             <artifactId>onpremises-ide-packaging-zip-terminal</artifactId>
             <version>${project.parent.version}</version>
             <type>tar.gz</type>
         </dependency>
-        <!--dependency>
-            <groupId>com.codenvy.onpremises</groupId>
-            <artifactId>onpremises-ide-packaging-tomcat-site</artifactId>
-            <version>${codenvy.onpremises.version}</version>
-            <type>zip</type>
-        </dependency-->
     </dependencies>
     <build>
         <plugins>
