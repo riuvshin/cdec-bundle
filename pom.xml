@@ -25,6 +25,9 @@
     <artifactId>cdec-bundle</artifactId>
     <packaging>pom</packaging>
     <name>CDEC BUNDLE</name>
+    <properties>
+        <deployment.branch>enterprise_4.0</deployment.branch>
+    </properties>
     <dependencies>
         <!--dependency>
             <groupId>com.codenvy.analytics</groupId>
@@ -87,7 +90,7 @@
                             <arguments>
                                 <argument>clone</argument>
                                 <argument>-b</argument>
-                                <argument>enterprise_4.0</argument>
+                                <argument>${deployment.branch}</argument>
                                 <argument>git@github.com:codenvy/deployment.git</argument>
                                 <argument>${project.build.directory}/deployment</argument>
                             </arguments>
