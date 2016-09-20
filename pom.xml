@@ -26,8 +26,8 @@
     <packaging>pom</packaging>
     <name>CDEC BUNDLE</name>
     <properties>
-        <deployment.branch>enterprise_4.0</deployment.branch>
         <customer.groupid>onpremises</customer.groupid>
+        <deployment.branch>enterprise_4.0</deployment.branch>
     </properties>
     <dependencies>
         <dependency>
