@@ -24,16 +24,6 @@
     <dependencySets>
         <dependencySet>
             <unpack>false</unpack>
-            <outputDirectory>files/servers/prod/machine</outputDirectory>
-            <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
-            <useProjectArtifact>false</useProjectArtifact>
-            <includes>
-                <include>com.codenvy.${customer.groupid}:onpremises-ide-packaging-tomcat-ext-server</include>
-                <include>com.codenvy.${customer.groupid}:onpremises-ide-packaging-zip-terminal</include>
-            </includes>
-        </dependencySet>
-        <dependencySet>
-            <unpack>false</unpack>
             <outputDirectory>files/servers/prod/aio</outputDirectory>
             <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
             <useProjectArtifact>false</useProjectArtifact>
